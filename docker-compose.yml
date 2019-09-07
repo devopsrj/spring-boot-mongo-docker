@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   springboot:
-    image: dockerhandson/spring-boot-mongo:latest
+    image: 13.233.164.219:8083/spring_boot_nexus:${BUILD_NUMBER}
     restart: always
     container_name: springboot
     ports:
@@ -11,7 +11,7 @@ services:
     depends_on:
       - mongo
     deploy:
-      replicas: 2
+      replicas: 3
       update_config:
         parallelism: 1
         delay: 20s
@@ -37,4 +37,4 @@ volumes:
 networks:
   default:
     external:
-      name: giddon
+      name:
