@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
   springboot:
-    image: 172.31.37.108:8083/spring_boot_nexus:${BUILD_NUMBER}
+    image: 172.31.37.108:8083/spring_boot_nexus:latest
     restart: always
     container_name: springboot
     ports:
